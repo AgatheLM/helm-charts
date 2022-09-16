@@ -217,7 +217,8 @@ mariadb:
     ## @param primary.configuration [string] MariaDB Primary configuration to be injected as ConfigMap
     ## ref: https://mysql.com/kb/en/mysql/configuring-mysql-with-mycnf/#example-of-configuration-file
     ##
-    configuration: |-
+    ## lower_case_table_names : pour que les noms de table soient en minuscule plutot qu'en majuscule par defaut (lié à linux, alors que ça passait sous windows initialement)
+     configuration: |-
       [mysqld]
       skip-name-resolve
       explicit_defaults_for_timestamp
